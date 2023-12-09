@@ -48,6 +48,8 @@ services:
       # Useful settings for development/laptop use - modify as needed for Prod
       # This one makes ksqlDB feel a bit more responsive when queries start running
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 100
+      KAFKA_METRIC_REPORTERS: "io.confluent.metrics.reporter.ConfluentMetricsReporter"
+      CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: kafka:29092
     command:
       - bash
       - -c 
